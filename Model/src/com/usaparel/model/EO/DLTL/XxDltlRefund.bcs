@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.DLTL.XxDltlRefund
+
+package com.usaparel.model.EO.DLTL
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="DltlRefundId")
+def DltlRefundId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_dltl_refund_seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

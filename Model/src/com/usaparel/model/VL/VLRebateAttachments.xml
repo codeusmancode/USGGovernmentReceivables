@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="VLRebateAttachments"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <Properties>
+    <SchemaBasedProperties>
+      <LABEL
+        ResId="com.usaparel.model.VL.VLRebateAttachments_LABEL"/>
+    </SchemaBasedProperties>
+  </Properties>
+  <ViewLinkDefEnd
+    Name="VOXxReabateRefund"
+    Cardinality="1"
+    Source="true"
+    Owner="com.usaparel.model.VO.REBATE.VOXxReabateRefund">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="VOXxReabateRefund"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.usaparel.model.VO.REBATE.VOXxReabateRefund.RebateRefundId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="VOXxRebateRefundAttachment"
+    Cardinality="-1"
+    Owner="com.usaparel.model.VO.REBATE.VOXxRebateRefundAttachment">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="VOXxRebateRefundAttachment"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.usaparel.model.VO.REBATE.VOXxRebateRefundAttachment.RebateRefundId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.usaparel.model.ModelBundle"/>
+  </ResourceBundle>
+</ViewLink>

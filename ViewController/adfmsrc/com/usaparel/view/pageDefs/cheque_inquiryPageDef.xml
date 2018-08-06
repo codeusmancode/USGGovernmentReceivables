@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="cheque_inquiryPageDef"
+                Package="com.usaparel.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VOXxReabateRefundLines1" RangeSize="16" DataControl="AppModuleDataControl"
+              id="VOXxReabateRefundLines1Iterator"/>
+    <searchRegion Criteria="VOXxReabateRefundLinesCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="VOXxReabateRefundLines1Iterator" id="VOXxReabateRefundLinesCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VOXxReabateRefundLines1Iterator" id="VOXxReabateRefundLines1">
+      <nodeDefinition DefName="com.usaparel.model.VO.REBATE.VOXxReabateRefundLines" Name="VOXxReabateRefundLines10">
+        <AttrNames>
+          <Item Value="LineId"/>
+          <Item Value="RebateRefundId"/>
+          <Item Value="RebateAmountReceived"/>
+          <Item Value="LessExcess"/>
+          <Item Value="ChequeNo"/>
+          <Item Value="ChequeDate"/>
+          <Item Value="ClaimRecFinancialYear"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdationDate"/>
+          <Item Value="VersionNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.DLTL.XxDltlRealization
+
+package com.usaparel.model.EO.DLTL
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="EprcId")
+def EprcId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_dltl_realization_seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

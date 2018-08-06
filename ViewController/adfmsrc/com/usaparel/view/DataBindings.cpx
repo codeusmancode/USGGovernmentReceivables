@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.usaparel.view" ClientType="Generic">
+  <pageMap>
+    <page path="/rebate.jsf" usageId="com_usaparel_view_rebatePageDef"/>
+    <page path="/rebate_history.jsf" usageId="com_usaparel_view_rebate_historyPageDef"/>
+    <page path="/testing.jsf" usageId="com_usaparel_view_testingPageDef"/>
+    <page path="/dltl.jsf" usageId="com_usaparel_view_dltlPageDef"/>
+    <page path="PageFlow#ExecuteWithParams" usageId="com_usaparel_view_adfc_config___ExecuteWithParamsPageDef"/>
+    <page path="PageFlow#ExecuteWithParams1" usageId="com_usaparel_view_adfc_config___ExecuteWithParams1PageDef"/>
+    <page path="/view1.jsf" usageId="com_usaparel_view_view1PageDef"/>
+    <page path="/cheque_inquiry.jsf" usageId="com_usaparel_view_cheque_inquiryPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_usaparel_view_rebatePageDef" path="com.usaparel.view.pageDefs.rebatePageDef"/>
+    <page id="com_usaparel_view_rebate_historyPageDef" path="com.usaparel.view.pageDefs.rebate_historyPageDef"/>
+    <page id="com_usaparel_view_testingPageDef" path="com.usaparel.view.pageDefs.testingPageDef"/>
+    <page id="com_usaparel_view_dltlPageDef" path="com.usaparel.view.pageDefs.dltlPageDef"/>
+    <page id="com_usaparel_view_adfc_config___ExecuteWithParamsPageDef"
+          path="com.usaparel.view.pageDefs.adfc_config___ExecuteWithParamsPageDef"/>
+    <page id="com_usaparel_view_adfc_config___ExecuteWithParams1PageDef"
+          path="com.usaparel.view.pageDefs.adfc_config___ExecuteWithParams1PageDef"/>
+    <page id="com_usaparel_view_view1PageDef" path="com.usaparel.view.pageDefs.view1PageDef"/>
+    <page id="com_usaparel_view_cheque_inquiryPageDef" path="com.usaparel.view.pageDefs.cheque_inquiryPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="com.usaparel.model.AM"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

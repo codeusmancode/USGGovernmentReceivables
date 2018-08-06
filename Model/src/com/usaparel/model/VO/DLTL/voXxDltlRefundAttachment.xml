@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="voXxDltlRefundAttachment"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  SelectAllAttributes="false">
+  <EntityUsage
+    Name="XxDltlRefundAttachment"
+    Entity="com.usaparel.model.EO.DLTL.XxDltlRefundAttachment"/>
+  <ViewAttribute
+    Name="AttachmentId"
+    PrecisionRule="true"
+    EntityAttrName="AttachmentId"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="ATTACHMENT_ID"/>
+  <ViewAttribute
+    Name="FileName"
+    PrecisionRule="true"
+    EntityAttrName="FileName"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="FILE_NAME"/>
+  <ViewAttribute
+    Name="FileLocation"
+    PrecisionRule="true"
+    EntityAttrName="FileLocation"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="FILE_LOCATION"/>
+  <ViewAttribute
+    Name="AttchType"
+    PrecisionRule="true"
+    EntityAttrName="AttchType"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="ATTCH_TYPE"/>
+  <ViewAttribute
+    Name="CreatedBy"
+    PrecisionRule="true"
+    EntityAttrName="CreatedBy"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="CREATED_BY"/>
+  <ViewAttribute
+    Name="DltlId"
+    PrecisionRule="true"
+    EntityAttrName="DltlId"
+    EntityUsage="XxDltlRefundAttachment"
+    AliasName="DLTL_ID"/>
+</ViewObject>

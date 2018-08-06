@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.DLTL.XxDltlBlAirway
+
+package com.usaparel.model.EO.DLTL
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="BlId")
+def BlId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_dltl_bl_airway_seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

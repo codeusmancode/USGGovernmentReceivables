@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="cheque_inquiry.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/app_template.jsf" id="pt1">
+                <f:facet name="main_body">
+                    <af:panelGroupLayout id="pgl1">
+                        <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+                            <f:facet name="menus"/>
+                            <f:facet name="toolbar">
+                                <af:toolbar id="t2">
+                                    <af:query id="qryId1" headerText="Search" disclosed="true"
+                                              value="#{bindings.VOXxReabateRefundLinesCriteriaQuery.queryDescriptor}"
+                                              model="#{bindings.VOXxReabateRefundLinesCriteriaQuery.queryModel}"
+                                              queryListener="#{bindings.VOXxReabateRefundLinesCriteriaQuery.processQuery}"
+                                              queryOperationListener="#{bindings.VOXxReabateRefundLinesCriteriaQuery.processQueryOperation}"
+                                              displayMode="simple"/>
+                                </af:toolbar>
+                            </f:facet>
+                            <f:facet name="statusbar"/>
+                            <af:table value="#{bindings.VOXxReabateRefundLines1.collectionModel}" var="row"
+                                      rows="#{bindings.VOXxReabateRefundLines1.rangeSize}"
+                                      emptyText="#{bindings.VOXxReabateRefundLines1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.VOXxReabateRefundLines1.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.VOXxReabateRefundLines1.collectionModel.makeCurrent}"
+                                      rowSelection="single" fetchSize="#{bindings.VOXxReabateRefundLines1.rangeSize}"
+                                      id="t1" autoHeightRows="15">
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.LineId.label}" id="c1"
+                                           rendered="false">
+                                    <af:outputText value="#{row.LineId}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.LineId.tooltip}"
+                                                   id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.LineId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.RebateRefundId.label}"
+                                           id="c2" rendered="false">
+                                    <af:outputText value="#{row.RebateRefundId}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.RebateRefundId.tooltip}"
+                                                   id="ot2">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.RebateRefundId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.RebateAmountReceived.label}"
+                                           id="c3">
+                                    <af:outputText value="#{row.RebateAmountReceived}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.RebateAmountReceived.tooltip}"
+                                                   id="ot3">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.RebateAmountReceived.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.LessExcess.label}"
+                                           id="c4">
+                                    <af:outputText value="#{row.LessExcess}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.LessExcess.tooltip}"
+                                                   id="ot4">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.LessExcess.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.ChequeNo.label}"
+                                           id="c5">
+                                    <af:outputText value="#{row.ChequeNo}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.ChequeNo.tooltip}"
+                                                   id="ot5"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.ChequeDate.label}"
+                                           id="c6">
+                                    <af:outputText value="#{row.ChequeDate}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.ChequeDate.tooltip}"
+                                                   id="ot6">
+                                        <af:convertDateTime pattern="#{bindings.VOXxReabateRefundLines1.hints.ChequeDate.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.ClaimRecFinancialYear.label}"
+                                           id="c7">
+                                    <af:outputText value="#{row.ClaimRecFinancialYear}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.ClaimRecFinancialYear.tooltip}"
+                                                   id="ot7"/>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.CreatedBy.label}"
+                                           id="c8" rendered="false">
+                                    <af:outputText value="#{row.CreatedBy}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.CreatedBy.tooltip}"
+                                                   id="ot8">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.CreatedBy.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.CreationDate.label}"
+                                           id="c9" rendered="false">
+                                    <af:outputText value="#{row.CreationDate}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.CreationDate.tooltip}"
+                                                   id="ot9">
+                                        <af:convertDateTime pattern="#{bindings.VOXxReabateRefundLines1.hints.CreationDate.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.UpdatedBy.label}"
+                                           id="c10" rendered="false">
+                                    <af:outputText value="#{row.UpdatedBy}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.UpdatedBy.tooltip}"
+                                                   id="ot10">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.UpdatedBy.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.UpdationDate.label}"
+                                           id="c11" rendered="false">
+                                    <af:outputText value="#{row.UpdationDate}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.UpdationDate.tooltip}"
+                                                   id="ot11">
+                                        <af:convertDateTime pattern="#{bindings.VOXxReabateRefundLines1.hints.UpdationDate.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column headerText="#{bindings.VOXxReabateRefundLines1.hints.VersionNumber.label}"
+                                           id="c12" rendered="false">
+                                    <af:outputText value="#{row.VersionNumber}"
+                                                   shortDesc="#{bindings.VOXxReabateRefundLines1.hints.VersionNumber.tooltip}"
+                                                   id="ot12">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.VOXxReabateRefundLines1.hints.VersionNumber.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                        </af:panelCollection>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

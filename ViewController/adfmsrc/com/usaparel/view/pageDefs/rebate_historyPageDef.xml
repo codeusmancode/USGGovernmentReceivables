@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="rebate_historyPageDef"
+                Package="com.usaparel.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VOXxRebateRefundHistory1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="VOXxRebateRefundHistory1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VOXxRebateRefundHistory1Iterator" id="VOXxRebateRefundHistory1">
+      <nodeDefinition DefName="com.usaparel.model.VO.REBATE.VOXxRebateRefundHistory" Name="VOXxRebateRefundHistory10">
+        <AttrNames>
+          <Item Value="RebateHistoryId"/>
+          <Item Value="RebateRefundId"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="ShippingPort"/>
+          <Item Value="ShippingBillNo"/>
+          <Item Value="ShippingBillDate"/>
+          <Item Value="RebateAmount"/>
+          <Item Value="CaseFiledDate"/>
+          <Item Value="ClaimFiledFinancialYear"/>
+          <Item Value="RebateAmountReceived"/>
+          <Item Value="LessExcess"/>
+          <Item Value="ChequeNo"/>
+          <Item Value="ChequeDate"/>
+          <Item Value="ClaimRecFinancialYear"/>
+          <Item Value="Status"/>
+          <Item Value="PendingAmount"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdationDate"/>
+          <Item Value="VersionNumber"/>
+          <Item Value="InvoiceValue"/>
+          <Item Value="RebateEsitmate"/>
+          <Item Value="RealizationDate"/>
+          <Item Value="ConsultantDispatchDate"/>
+          <Item Value="OrgId"/>
+          <Item Value="ClaimAgainst"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

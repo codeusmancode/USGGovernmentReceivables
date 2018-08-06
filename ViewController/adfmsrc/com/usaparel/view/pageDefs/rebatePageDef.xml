@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="rebatePageDef"
+                Package="com.usaparel.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VOXxReabateRefund1" RangeSize="4" DataControl="AppModuleDataControl"
+              id="VOXxReabateRefund1Iterator"/>
+    <iterator Binds="VOXxRebateRefundAttachment2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="VOXxRebateRefundAttachment2Iterator"/>
+    <iterator Binds="VOXxReabateRefundLines2" RangeSize="2" DataControl="AppModuleDataControl"
+              id="VOXxReabateRefundLines2Iterator"/>
+    <searchRegion Criteria="VOXxReabateRefundCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="VOXxReabateRefund1Iterator" id="VOXxReabateRefundCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <action IterBinding="VOXxReabateRefund1Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <tree IterBinding="VOXxRebateRefundAttachment2Iterator" id="VOXxRebateRefundAttachment2">
+      <nodeDefinition DefName="com.usaparel.model.VO.REBATE.VOXxRebateRefundAttachment" Name="VOXxRebateRefundAttachment20">
+        <AttrNames>
+          <Item Value="FileName"/>
+          <Item Value="FileLocation"/>
+          <Item Value="AttachmentId"/>
+          <Item Value="RebateRefundId"/>
+          <Item Value="AttchType"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="VOXxReabateRefund1Iterator" id="VOXxReabateRefund1">
+      <nodeDefinition DefName="com.usaparel.model.VO.REBATE.VOXxReabateRefund" Name="VOXxReabateRefund10">
+        <AttrNames>
+          <Item Value="RebateRefundId"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="ShippingPort"/>
+          <Item Value="ShippingBillNo"/>
+          <Item Value="ShippingBillDate"/>
+          <Item Value="RebateAmount"/>
+          <Item Value="CaseFiledDate"/>
+          <Item Value="ClaimFiledFinancialYear"/>
+          <Item Value="RebateAmountReceived"/>
+          <Item Value="LessExcess"/>
+          <Item Value="ChequeNo"/>
+          <Item Value="ChequeDate"/>
+          <Item Value="ClaimRecFinancialYear"/>
+          <Item Value="Status"/>
+          <Item Value="PendingAmount"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdationDate"/>
+          <Item Value="VersionNumber"/>
+          <Item Value="RebateEsitmate"/>
+          <Item Value="RealizationDate"/>
+          <Item Value="InvoiceValue"/>
+          <Item Value="ConsultantDispatchDate"/>
+          <Item Value="Unit"/>
+          <Item Value="ClaimAgainst"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="VOXxReabateRefundLines2Iterator" id="VOXxReabateRefundLines2">
+      <nodeDefinition DefName="com.usaparel.model.VO.REBATE.VOXxReabateRefundLines" Name="VOXxReabateRefundLines20">
+        <AttrNames>
+          <Item Value="LineId"/>
+          <Item Value="RebateRefundId"/>
+          <Item Value="RebateAmountReceived"/>
+          <Item Value="LessExcess"/>
+          <Item Value="ChequeNo"/>
+          <Item Value="ChequeDate"/>
+          <Item Value="ClaimRecFinancialYear"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdationDate"/>
+          <Item Value="VersionNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="VOXxReabateRefundLines2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

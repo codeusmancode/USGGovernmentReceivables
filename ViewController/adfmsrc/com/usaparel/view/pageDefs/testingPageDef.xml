@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="testingPageDef"
+                Package="com.usaparel.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VOXxDltlRefund1" RangeSize="25" DataControl="AppModuleDataControl" id="VOXxDltlRefund1Iterator"/>
+    <iterator Binds="VOXxDltlRealization1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="VOXxDltlRealization1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="VOXxDltlRefund1Iterator" id="VOXxDltlRefund1">
+      <nodeDefinition DefName="com.usaparel.model.VO.DLTL.VOXxDltlRefund" Name="VOXxDltlRefund10">
+        <AttrNames>
+          <Item Value="DltlRefundId"/>
+          <Item Value="Unit"/>
+          <Item Value="InvoiceNumber"/>
+          <Item Value="InvoiceDate"/>
+          <Item Value="Currency"/>
+          <Item Value="InvoiceValue"/>
+          <Item Value="Customer"/>
+          <Item Value="CustomerAddress"/>
+          <Item Value="Destination"/>
+          <Item Value="ShipmentTerm"/>
+          <Item Value="CreatedBy"/>
+          <Item Value="CreationDate"/>
+          <Item Value="UpdatedBy"/>
+          <Item Value="UpdationDate"/>
+          <Item Value="VersionNumber"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="EprcId">
+      <AttrNames>
+        <Item Value="EprcId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="DltlRefundId">
+      <AttrNames>
+        <Item Value="DltlRefundId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="EprcNo">
+      <AttrNames>
+        <Item Value="EprcNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="EprcDate">
+      <AttrNames>
+        <Item Value="EprcDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="EprcBank">
+      <AttrNames>
+        <Item Value="EprcBank"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="Commision">
+      <AttrNames>
+        <Item Value="Commision"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="ForeignBankCharges">
+      <AttrNames>
+        <Item Value="ForeignBankCharges"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="Discount">
+      <AttrNames>
+        <Item Value="Discount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="WarExchangeRate">
+      <AttrNames>
+        <Item Value="WarExchangeRate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="CreatedBy">
+      <AttrNames>
+        <Item Value="CreatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="CreationDate">
+      <AttrNames>
+        <Item Value="CreationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="UpdatedBy">
+      <AttrNames>
+        <Item Value="UpdatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="UpdationDate">
+      <AttrNames>
+        <Item Value="UpdationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="VOXxDltlRealization1Iterator" id="VersionNumber">
+      <AttrNames>
+        <Item Value="VersionNumber"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.DLTL.XxDltlGd
+
+package com.usaparel.model.EO.DLTL
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="GdId")
+def GdId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_dltl_gd_Seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

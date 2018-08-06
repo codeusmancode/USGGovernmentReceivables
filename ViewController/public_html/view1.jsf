@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="view1.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:table value="#{bindings.VOXxRebateRefundHistory1.collectionModel}" var="row"
+                      rows="#{bindings.VOXxRebateRefundHistory1.rangeSize}"
+                      emptyText="#{bindings.VOXxRebateRefundHistory1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      rowBandingInterval="0"
+                      selectedRowKeys="#{bindings.VOXxRebateRefundHistory1.collectionModel.selectedRow}"
+                      selectionListener="#{bindings.VOXxRebateRefundHistory1.collectionModel.makeCurrent}"
+                      rowSelection="single" fetchSize="#{bindings.VOXxRebateRefundHistory1.rangeSize}" id="t1">
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.label}" id="c1">
+                    <af:inputText value="#{row.bindings.RebateHistoryId.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.tooltip}"
+                                  id="it1">
+                        <f:validator binding="#{row.bindings.RebateHistoryId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.label}" id="c2">
+                    <af:inputText value="#{row.bindings.RebateRefundId.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.tooltip}"
+                                  id="it2">
+                        <f:validator binding="#{row.bindings.RebateRefundId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.RebateRefundId.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.label}" id="c3">
+                    <af:inputText value="#{row.bindings.InvoiceNumber.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceNumber.tooltip}" id="it3">
+                        <f:validator binding="#{row.bindings.InvoiceNumber.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.label}" id="c4">
+                    <af:inputText value="#{row.bindings.ShippingPort.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ShippingPort.tooltip}" id="it4">
+                        <f:validator binding="#{row.bindings.ShippingPort.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.label}" id="c5">
+                    <af:inputText value="#{row.bindings.ShippingBillNo.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillNo.tooltip}"
+                                  id="it5">
+                        <f:validator binding="#{row.bindings.ShippingBillNo.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.label}" id="c6">
+                    <af:inputDate value="#{row.bindings.ShippingBillDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.tooltip}"
+                                  id="id1">
+                        <f:validator binding="#{row.bindings.ShippingBillDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.label}" id="c7">
+                    <af:inputText value="#{row.bindings.RebateAmount.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.tooltip}" id="it6">
+                        <f:validator binding="#{row.bindings.RebateAmount.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmount.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.label}" id="c8">
+                    <af:inputDate value="#{row.bindings.CaseFiledDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.tooltip}" id="id2">
+                        <f:validator binding="#{row.bindings.CaseFiledDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.CaseFiledDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.label}"
+                           id="c9">
+                    <af:inputText value="#{row.bindings.ClaimFiledFinancialYear.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ClaimFiledFinancialYear.tooltip}"
+                                  id="it7">
+                        <f:validator binding="#{row.bindings.ClaimFiledFinancialYear.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.label}" id="c10">
+                    <af:inputText value="#{row.bindings.RebateAmountReceived.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.tooltip}"
+                                  id="it8">
+                        <f:validator binding="#{row.bindings.RebateAmountReceived.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.RebateAmountReceived.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.label}" id="c11">
+                    <af:inputText value="#{row.bindings.LessExcess.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.tooltip}" id="it9">
+                        <f:validator binding="#{row.bindings.LessExcess.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.LessExcess.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.label}" id="c12">
+                    <af:inputText value="#{row.bindings.ChequeNo.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ChequeNo.tooltip}" id="it10">
+                        <f:validator binding="#{row.bindings.ChequeNo.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.label}" id="c13">
+                    <af:inputDate value="#{row.bindings.ChequeDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.tooltip}" id="id3">
+                        <f:validator binding="#{row.bindings.ChequeDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.ChequeDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.label}" id="c14">
+                    <af:inputText value="#{row.bindings.ClaimRecFinancialYear.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ClaimRecFinancialYear.tooltip}"
+                                  id="it11">
+                        <f:validator binding="#{row.bindings.ClaimRecFinancialYear.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.Status.label}" id="c15">
+                    <af:inputText value="#{row.bindings.Status.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.Status.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.Status.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.Status.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.Status.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.Status.tooltip}" id="it12">
+                        <f:validator binding="#{row.bindings.Status.validator}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.label}" id="c16">
+                    <af:inputText value="#{row.bindings.PendingAmount.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.tooltip}"
+                                  id="it13">
+                        <f:validator binding="#{row.bindings.PendingAmount.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.PendingAmount.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.label}" id="c17">
+                    <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.tooltip}" id="it14">
+                        <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.CreatedBy.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.label}" id="c18">
+                    <af:inputDate value="#{row.bindings.CreationDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.tooltip}" id="id4">
+                        <f:validator binding="#{row.bindings.CreationDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.CreationDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.label}" id="c19">
+                    <af:inputText value="#{row.bindings.UpdatedBy.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.tooltip}" id="it15">
+                        <f:validator binding="#{row.bindings.UpdatedBy.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.UpdatedBy.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.label}" id="c20">
+                    <af:inputDate value="#{row.bindings.UpdationDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.tooltip}" id="id5">
+                        <f:validator binding="#{row.bindings.UpdationDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.UpdationDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.label}" id="c21">
+                    <af:inputText value="#{row.bindings.VersionNumber.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.tooltip}"
+                                  id="it16">
+                        <f:validator binding="#{row.bindings.VersionNumber.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.VersionNumber.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.label}" id="c22">
+                    <af:inputText value="#{row.bindings.InvoiceValue.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.tooltip}" id="it17">
+                        <f:validator binding="#{row.bindings.InvoiceValue.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.InvoiceValue.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.label}" id="c23">
+                    <af:inputText value="#{row.bindings.RebateEsitmate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.tooltip}"
+                                  id="it18">
+                        <f:validator binding="#{row.bindings.RebateEsitmate.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.RebateEsitmate.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.label}" id="c24">
+                    <af:inputDate value="#{row.bindings.RealizationDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.tooltip}"
+                                  id="id6">
+                        <f:validator binding="#{row.bindings.RealizationDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.RealizationDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.label}"
+                           id="c25">
+                    <af:inputDate value="#{row.bindings.ConsultantDispatchDate.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.displayWidth}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.tooltip}"
+                                  id="id7">
+                        <f:validator binding="#{row.bindings.ConsultantDispatchDate.validator}"/>
+                        <af:convertDateTime pattern="#{bindings.VOXxRebateRefundHistory1.hints.ConsultantDispatchDate.format}"/>
+                    </af:inputDate>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.label}" id="c26">
+                    <af:inputText value="#{row.bindings.OrgId.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.tooltip}" id="it19">
+                        <f:validator binding="#{row.bindings.OrgId.validator}"/>
+                        <af:convertNumber groupingUsed="false"
+                                          pattern="#{bindings.VOXxRebateRefundHistory1.hints.OrgId.format}"/>
+                    </af:inputText>
+                </af:column>
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.label}" id="c27">
+                    <af:inputText value="#{row.bindings.ClaimAgainst.inputValue}"
+                                  label="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.label}"
+                                  required="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.mandatory}"
+                                  columns="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.displayWidth}"
+                                  maximumLength="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.precision}"
+                                  shortDesc="#{bindings.VOXxRebateRefundHistory1.hints.ClaimAgainst.tooltip}" id="it20">
+                        <f:validator binding="#{row.bindings.ClaimAgainst.validator}"/>
+                    </af:inputText>
+                </af:column>
+            </af:table>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.REBATE.XxReabateRefundLines
+
+package com.usaparel.model.EO.REBATE
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="LineId")
+def LineId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_reabate_refund_lines_seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

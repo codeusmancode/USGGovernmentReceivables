@@ -1,0 +1,12 @@
+//Groovy Scripts for com.usaparel.model.EO.REBATE.XxRebateRefundAttachment
+
+package com.usaparel.model.EO.REBATE
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="AttachmentId")
+def AttachmentId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("xx_rebate_refund_attach_seq",adf.object.getDBTransaction())).getSequenceNumber()
+}
+

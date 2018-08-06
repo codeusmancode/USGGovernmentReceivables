@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>app_template</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>main_body</afc:facet-name>
+            </afc:facet>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelSplitter id="pt_ps1" orientation="vertical" splitterPosition="100">
+        <f:facet name="first">
+            <af:panelSplitter id="pt_ps2" positionedFromEnd="true"
+                              inlineStyle='background-image:url("images/headerBg.jpg"); background-repeat:repeat;'
+                              disabled="true">
+                <f:facet name="first">
+                    <af:panelGroupLayout id="pt_pgl1" layout="vertical"
+                                         inlineStyle="text-justify:auto;" halign="left">
+                        <af:outputText value="Government Receivables" id="pt_ot1"
+                                       inlineStyle="color:#ffffff; font-size:40px;"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pt_pgl2" inlineStyle="text-align:center;"
+                                         styleClass="AFStretchWidth" layout="vertical">
+                        <af:spacer width="10" height="40" id="pt_s1"/>
+                        <af:outputText value="Welcome #{sessionScope.username}" id="pt_ot2" inlineStyle="color:White; font-weight:bold;"/>
+                        <af:link text="Logout" id="pt_l1" inlineStyle="color:Red;"
+                                 action="#{backingBeanScope.RebateRefundBean.logout}"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </f:facet>
+        <f:facet name="second">
+            <af:facetRef facetName="main_body"/>
+        </f:facet>
+    </af:panelSplitter>
+    <!--oracle-jdev-comment:preferred-managed-bean-name:RebateRefundBean-->
+</af:pageTemplateDef>

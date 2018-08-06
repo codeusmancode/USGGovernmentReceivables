@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="testing.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelGroupLayout id="pgl1">
+                <af:panelAccordion discloseMany="false" id="pa1">
+                    <af:showDetailItem id="pane1" text="Panel Label 1" disclosed="true">
+                        <f:facet name="toolbar">
+                            <af:button text="button 1" id="b1"/>
+                        </f:facet>
+                        <af:table value="#{bindings.VOXxDltlRefund1.collectionModel}" var="row"
+                                  rows="#{bindings.VOXxDltlRefund1.rangeSize}"
+                                  emptyText="#{bindings.VOXxDltlRefund1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                  rowBandingInterval="0" fetchSize="#{bindings.VOXxDltlRefund1.rangeSize}" id="t1">
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.label}" id="c1">
+                                <af:inputText value="#{row.bindings.DltlRefundId.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.tooltip}"
+                                              id="it1">
+                                    <f:validator binding="#{row.bindings.DltlRefundId.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.DltlRefundId.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.Unit.label}" id="c2">
+                                <af:inputText value="#{row.bindings.Unit.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.Unit.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.Unit.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.Unit.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.Unit.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.Unit.tooltip}" id="it2">
+                                    <f:validator binding="#{row.bindings.Unit.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.Unit.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.label}" id="c3">
+                                <af:inputText value="#{row.bindings.InvoiceNumber.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.InvoiceNumber.tooltip}"
+                                              id="it3">
+                                    <f:validator binding="#{row.bindings.InvoiceNumber.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.label}" id="c4">
+                                <af:inputText value="#{row.bindings.InvoiceDate.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.tooltip}"
+                                              id="it4">
+                                    <f:validator binding="#{row.bindings.InvoiceDate.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.InvoiceDate.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.Currency.label}" id="c5">
+                                <af:inputText value="#{row.bindings.Currency.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.Currency.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.Currency.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.Currency.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.Currency.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.Currency.tooltip}" id="it5">
+                                    <f:validator binding="#{row.bindings.Currency.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.label}" id="c6">
+                                <af:inputText value="#{row.bindings.InvoiceValue.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.tooltip}"
+                                              id="it6">
+                                    <f:validator binding="#{row.bindings.InvoiceValue.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.InvoiceValue.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.Customer.label}" id="c7">
+                                <af:inputText value="#{row.bindings.Customer.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.Customer.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.Customer.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.Customer.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.Customer.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.Customer.tooltip}" id="it7">
+                                    <f:validator binding="#{row.bindings.Customer.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.label}" id="c8">
+                                <af:inputText value="#{row.bindings.CustomerAddress.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.CustomerAddress.tooltip}"
+                                              id="it8">
+                                    <f:validator binding="#{row.bindings.CustomerAddress.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.Destination.label}" id="c9">
+                                <af:inputText value="#{row.bindings.Destination.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.Destination.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.Destination.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.Destination.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.Destination.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.Destination.tooltip}"
+                                              id="it9">
+                                    <f:validator binding="#{row.bindings.Destination.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.label}" id="c10">
+                                <af:inputText value="#{row.bindings.ShipmentTerm.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.ShipmentTerm.tooltip}"
+                                              id="it10">
+                                    <f:validator binding="#{row.bindings.ShipmentTerm.validator}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.CreatedBy.label}" id="c11">
+                                <af:inputText value="#{row.bindings.CreatedBy.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.CreatedBy.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.CreatedBy.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.CreatedBy.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.CreatedBy.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.CreatedBy.tooltip}" id="it11">
+                                    <f:validator binding="#{row.bindings.CreatedBy.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.CreatedBy.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.CreationDate.label}" id="c12">
+                                <af:inputDate value="#{row.bindings.CreationDate.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.CreationDate.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.CreationDate.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.CreationDate.displayWidth}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.CreationDate.tooltip}"
+                                              id="id1">
+                                    <f:validator binding="#{row.bindings.CreationDate.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.VOXxDltlRefund1.hints.CreationDate.format}"/>
+                                </af:inputDate>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.label}" id="c13">
+                                <af:inputText value="#{row.bindings.UpdatedBy.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.tooltip}" id="it12">
+                                    <f:validator binding="#{row.bindings.UpdatedBy.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.UpdatedBy.format}"/>
+                                </af:inputText>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.UpdationDate.label}" id="c14">
+                                <af:inputDate value="#{row.bindings.UpdationDate.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.UpdationDate.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.UpdationDate.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.UpdationDate.displayWidth}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.UpdationDate.tooltip}"
+                                              id="id2">
+                                    <f:validator binding="#{row.bindings.UpdationDate.validator}"/>
+                                    <af:convertDateTime pattern="#{bindings.VOXxDltlRefund1.hints.UpdationDate.format}"/>
+                                </af:inputDate>
+                            </af:column>
+                            <af:column headerText="#{bindings.VOXxDltlRefund1.hints.VersionNumber.label}" id="c15">
+                                <af:inputText value="#{row.bindings.VersionNumber.inputValue}"
+                                              label="#{bindings.VOXxDltlRefund1.hints.VersionNumber.label}"
+                                              required="#{bindings.VOXxDltlRefund1.hints.VersionNumber.mandatory}"
+                                              columns="#{bindings.VOXxDltlRefund1.hints.VersionNumber.displayWidth}"
+                                              maximumLength="#{bindings.VOXxDltlRefund1.hints.VersionNumber.precision}"
+                                              shortDesc="#{bindings.VOXxDltlRefund1.hints.VersionNumber.tooltip}"
+                                              id="it13">
+                                    <f:validator binding="#{row.bindings.VersionNumber.validator}"/>
+                                    <af:convertNumber groupingUsed="false"
+                                                      pattern="#{bindings.VOXxDltlRefund1.hints.VersionNumber.format}"/>
+                                </af:inputText>
+                            </af:column>
+                        </af:table>
+                    </af:showDetailItem>
+                    <af:showDetailItem text="showDetailItem 2" id="sdi1">
+                        <af:panelFormLayout id="pfl1">
+                            <af:inputText value="#{bindings.EprcId.inputValue}" label="#{bindings.EprcId.hints.label}"
+                                          required="#{bindings.EprcId.hints.mandatory}"
+                                          columns="#{bindings.EprcId.hints.displayWidth}"
+                                          maximumLength="#{bindings.EprcId.hints.precision}"
+                                          shortDesc="#{bindings.EprcId.hints.tooltip}" id="it14">
+                                <f:validator binding="#{bindings.EprcId.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.EprcId.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.DltlRefundId.inputValue}"
+                                          label="#{bindings.DltlRefundId.hints.label}"
+                                          required="#{bindings.DltlRefundId.hints.mandatory}"
+                                          columns="#{bindings.DltlRefundId.hints.displayWidth}"
+                                          maximumLength="#{bindings.DltlRefundId.hints.precision}"
+                                          shortDesc="#{bindings.DltlRefundId.hints.tooltip}" id="it15">
+                                <f:validator binding="#{bindings.DltlRefundId.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.DltlRefundId.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.EprcNo.inputValue}" label="#{bindings.EprcNo.hints.label}"
+                                          required="#{bindings.EprcNo.hints.mandatory}"
+                                          columns="#{bindings.EprcNo.hints.displayWidth}"
+                                          maximumLength="#{bindings.EprcNo.hints.precision}"
+                                          shortDesc="#{bindings.EprcNo.hints.tooltip}" id="it16">
+                                <f:validator binding="#{bindings.EprcNo.validator}"/>
+                            </af:inputText>
+                            <af:inputDate value="#{bindings.EprcDate.inputValue}"
+                                          label="#{bindings.EprcDate.hints.label}"
+                                          required="#{bindings.EprcDate.hints.mandatory}"
+                                          columns="#{bindings.EprcDate.hints.displayWidth}"
+                                          shortDesc="#{bindings.EprcDate.hints.tooltip}" id="id3">
+                                <f:validator binding="#{bindings.EprcDate.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.EprcDate.format}"/>
+                            </af:inputDate>
+                            <af:inputText value="#{bindings.EprcBank.inputValue}"
+                                          label="#{bindings.EprcBank.hints.label}"
+                                          required="#{bindings.EprcBank.hints.mandatory}"
+                                          columns="#{bindings.EprcBank.hints.displayWidth}"
+                                          maximumLength="#{bindings.EprcBank.hints.precision}"
+                                          shortDesc="#{bindings.EprcBank.hints.tooltip}" id="it17">
+                                <f:validator binding="#{bindings.EprcBank.validator}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Commision.inputValue}"
+                                          label="#{bindings.Commision.hints.label}"
+                                          required="#{bindings.Commision.hints.mandatory}"
+                                          columns="#{bindings.Commision.hints.displayWidth}"
+                                          maximumLength="#{bindings.Commision.hints.precision}"
+                                          shortDesc="#{bindings.Commision.hints.tooltip}" id="it18">
+                                <f:validator binding="#{bindings.Commision.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Commision.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.ForeignBankCharges.inputValue}"
+                                          label="#{bindings.ForeignBankCharges.hints.label}"
+                                          required="#{bindings.ForeignBankCharges.hints.mandatory}"
+                                          columns="#{bindings.ForeignBankCharges.hints.displayWidth}"
+                                          maximumLength="#{bindings.ForeignBankCharges.hints.precision}"
+                                          shortDesc="#{bindings.ForeignBankCharges.hints.tooltip}" id="it19">
+                                <f:validator binding="#{bindings.ForeignBankCharges.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.ForeignBankCharges.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.Discount.inputValue}"
+                                          label="#{bindings.Discount.hints.label}"
+                                          required="#{bindings.Discount.hints.mandatory}"
+                                          columns="#{bindings.Discount.hints.displayWidth}"
+                                          maximumLength="#{bindings.Discount.hints.precision}"
+                                          shortDesc="#{bindings.Discount.hints.tooltip}" id="it20">
+                                <f:validator binding="#{bindings.Discount.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Discount.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.WarExchangeRate.inputValue}"
+                                          label="#{bindings.WarExchangeRate.hints.label}"
+                                          required="#{bindings.WarExchangeRate.hints.mandatory}"
+                                          columns="#{bindings.WarExchangeRate.hints.displayWidth}"
+                                          maximumLength="#{bindings.WarExchangeRate.hints.precision}"
+                                          shortDesc="#{bindings.WarExchangeRate.hints.tooltip}" id="it21">
+                                <f:validator binding="#{bindings.WarExchangeRate.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.WarExchangeRate.format}"/>
+                            </af:inputText>
+                            <af:inputText value="#{bindings.CreatedBy.inputValue}"
+                                          label="#{bindings.CreatedBy.hints.label}"
+                                          required="#{bindings.CreatedBy.hints.mandatory}"
+                                          columns="#{bindings.CreatedBy.hints.displayWidth}"
+                                          maximumLength="#{bindings.CreatedBy.hints.precision}"
+                                          shortDesc="#{bindings.CreatedBy.hints.tooltip}" id="it22">
+                                <f:validator binding="#{bindings.CreatedBy.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.CreatedBy.format}"/>
+                            </af:inputText>
+                            <af:inputDate value="#{bindings.CreationDate.inputValue}"
+                                          label="#{bindings.CreationDate.hints.label}"
+                                          required="#{bindings.CreationDate.hints.mandatory}"
+                                          columns="#{bindings.CreationDate.hints.displayWidth}"
+                                          shortDesc="#{bindings.CreationDate.hints.tooltip}" id="id4">
+                                <f:validator binding="#{bindings.CreationDate.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.CreationDate.format}"/>
+                            </af:inputDate>
+                            <af:inputText value="#{bindings.UpdatedBy.inputValue}"
+                                          label="#{bindings.UpdatedBy.hints.label}"
+                                          required="#{bindings.UpdatedBy.hints.mandatory}"
+                                          columns="#{bindings.UpdatedBy.hints.displayWidth}"
+                                          maximumLength="#{bindings.UpdatedBy.hints.precision}"
+                                          shortDesc="#{bindings.UpdatedBy.hints.tooltip}" id="it23">
+                                <f:validator binding="#{bindings.UpdatedBy.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.UpdatedBy.format}"/>
+                            </af:inputText>
+                            <af:inputDate value="#{bindings.UpdationDate.inputValue}"
+                                          label="#{bindings.UpdationDate.hints.label}"
+                                          required="#{bindings.UpdationDate.hints.mandatory}"
+                                          columns="#{bindings.UpdationDate.hints.displayWidth}"
+                                          shortDesc="#{bindings.UpdationDate.hints.tooltip}" id="id5">
+                                <f:validator binding="#{bindings.UpdationDate.validator}"/>
+                                <af:convertDateTime pattern="#{bindings.UpdationDate.format}"/>
+                            </af:inputDate>
+                            <af:inputText value="#{bindings.VersionNumber.inputValue}"
+                                          label="#{bindings.VersionNumber.hints.label}"
+                                          required="#{bindings.VersionNumber.hints.mandatory}"
+                                          columns="#{bindings.VersionNumber.hints.displayWidth}"
+                                          maximumLength="#{bindings.VersionNumber.hints.precision}"
+                                          shortDesc="#{bindings.VersionNumber.hints.tooltip}" id="it24">
+                                <f:validator binding="#{bindings.VersionNumber.validator}"/>
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.VersionNumber.format}"/>
+                            </af:inputText>
+                        </af:panelFormLayout>
+                    </af:showDetailItem>
+                </af:panelAccordion>
+            </af:panelGroupLayout>
+        </af:form>
+    </af:document>
+</f:view>
