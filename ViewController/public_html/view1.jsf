@@ -68,7 +68,7 @@
                         <f:validator binding="#{row.bindings.ShippingBillNo.validator}"/>
                     </af:inputText>
                 </af:column>
-                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.label}" id="c6">
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.label}" id="c64">
                     <af:inputDate value="#{row.bindings.ShippingBillDate.inputValue}"
                                   label="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.label}"
                                   required="#{bindings.VOXxRebateRefundHistory1.hints.ShippingBillDate.mandatory}"
