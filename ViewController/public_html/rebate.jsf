@@ -14,7 +14,7 @@
                                       model="#{bindings.VOXxReabateRefundCriteriaQuery.queryModel}"
                                       queryListener="#{bindings.VOXxReabateRefundCriteriaQuery.processQuery}"
                                       queryOperationListener="#{bindings.VOXxReabateRefundCriteriaQuery.processQueryOperation}"
-                                      displayMode="simple"/>
+                                      displayMode="simple" rows="1" maxColumns="5"/>
                         </af:panelBox>
                         <af:panelCollection id="pc1" styleClass="AFStretchWidth">
                             <f:facet name="menus"/>
@@ -71,18 +71,10 @@
                                         <f:validator binding="#{row.bindings.Unit.validator}"/>
                                     </af:selectOneChoice>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.InvoiceNumber.label}"
-                                           id="c2" filterable="true">
-                                    <af:inputListOfValues id="invoiceNumberId"
-                                                          popupTitle="Search and Select: #{bindings.VOXxReabateRefund1.hints.InvoiceNumber.label}"
-                                                          value="#{row.bindings.InvoiceNumber.inputValue}"
-                                                          model="#{row.bindings.InvoiceNumber.listOfValuesModel}"
-                                                          required="#{bindings.VOXxReabateRefund1.hints.InvoiceNumber.mandatory}"
-                                                          columns="#{bindings.VOXxReabateRefund1.hints.InvoiceNumber.displayWidth}"
-                                                          shortDesc="#{bindings.VOXxReabateRefund1.hints.InvoiceNumber.tooltip}"
-                                                          autoSubmit="true">
-                                        <f:validator binding="#{row.bindings.InvoiceNumber.validator}"/>
-                                    </af:inputListOfValues>
+                                <af:column id="c40" headerText="Commarcial Invoice#">
+                                    <af:outputText value="#{row.CommercialInvoiceNumber}"
+                                                   shortDesc="#{bindings.VOXxReabateRefund1.hints.CommercialInvoiceNumber.tooltip}"
+                                                   id="ot3"/>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.label}"
                                            id="c21">

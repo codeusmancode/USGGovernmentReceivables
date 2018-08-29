@@ -82,6 +82,9 @@
   <ViewUsage
     Name="VOXxDltlRealizationDeductions2"
     ViewObjectName="com.usaparel.model.VO.DLTL.VOXxDltlRealizationDeductions"/>
+  <ViewUsage
+    Name="LOVFormatTypes1"
+    ViewObjectName="com.usaparel.model.VO.LOV.LOVFormatTypes"/>
   <ViewLinkUsage
     Name="VLRebateAttachments1"
     ViewLinkObjectName="com.usaparel.model.VL.VLRebateAttachments"

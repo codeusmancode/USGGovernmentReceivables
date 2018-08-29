@@ -47,7 +47,9 @@ public class XxReabateRefundImpl extends EntityImpl {
         RealizationDate,
         RebateEsitmate,
         OrgId,
-        ClaimAgainst;
+        ClaimAgainst,
+        CommercialInvoiceNumber,
+        Format;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -99,6 +101,8 @@ public class XxReabateRefundImpl extends EntityImpl {
     public static final int REBATEESITMATE = AttributesEnum.RebateEsitmate.index();
     public static final int ORGID = AttributesEnum.OrgId.index();
     public static final int CLAIMAGAINST = AttributesEnum.ClaimAgainst.index();
+    public static final int COMMERCIALINVOICENUMBER = AttributesEnum.CommercialInvoiceNumber.index();
+    public static final int FORMAT = AttributesEnum.Format.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -506,6 +510,38 @@ public class XxReabateRefundImpl extends EntityImpl {
      */
     public void setClaimAgainst(String value) {
         setAttributeInternal(CLAIMAGAINST, value);
+    }
+
+    /**
+     * Gets the attribute value for CommercialInvoiceNumber, using the alias name CommercialInvoiceNumber.
+     * @return the value of CommercialInvoiceNumber
+     */
+    public String getCommercialInvoiceNumber() {
+        return (String) getAttributeInternal(COMMERCIALINVOICENUMBER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for CommercialInvoiceNumber.
+     * @param value value to set the CommercialInvoiceNumber
+     */
+    public void setCommercialInvoiceNumber(String value) {
+        setAttributeInternal(COMMERCIALINVOICENUMBER, value);
+    }
+
+    /**
+     * Gets the attribute value for Format, using the alias name Format.
+     * @return the value of Format
+     */
+    public String getFormat() {
+        return (String) getAttributeInternal(FORMAT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for Format.
+     * @param value value to set the Format
+     */
+    public void setFormat(String value) {
+        setAttributeInternal(FORMAT, value);
     }
 
     /**

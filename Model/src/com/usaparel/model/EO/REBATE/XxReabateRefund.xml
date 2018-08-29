@@ -26,7 +26,6 @@
     PrimaryKey="true">
     <TransientExpression
       Name="ExpressionScript"
-      trustMode="trusted"
       CodeSourceName="XxReabateRefundRow"/>
   </Attribute>
   <Attribute
@@ -247,6 +246,30 @@
     TableName="XX_REABATE_REFUND">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CommercialInvoiceNumber"
+    Precision="100"
+    ColumnName="COMMERCIAL_INVOICE_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XX_REABATE_REFUND">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Format"
+    Precision="30"
+    ColumnName="FORMAT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XX_REABATE_REFUND">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
   </Attribute>
   <Key

@@ -57,6 +57,7 @@
           <Item Value="ConsultantDispatchDate"/>
           <Item Value="Unit"/>
           <Item Value="ClaimAgainst"/>
+          <Item Value="CommercialInvoiceNumber"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
