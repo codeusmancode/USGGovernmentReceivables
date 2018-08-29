@@ -49,7 +49,8 @@ public class XxReabateRefundImpl extends EntityImpl {
         OrgId,
         ClaimAgainst,
         CommercialInvoiceNumber,
-        Format;
+        Format,
+        DataFormat;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -103,6 +104,7 @@ public class XxReabateRefundImpl extends EntityImpl {
     public static final int CLAIMAGAINST = AttributesEnum.ClaimAgainst.index();
     public static final int COMMERCIALINVOICENUMBER = AttributesEnum.CommercialInvoiceNumber.index();
     public static final int FORMAT = AttributesEnum.Format.index();
+    public static final int DATAFORMAT = AttributesEnum.DataFormat.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -542,6 +544,22 @@ public class XxReabateRefundImpl extends EntityImpl {
      */
     public void setFormat(String value) {
         setAttributeInternal(FORMAT, value);
+    }
+
+    /**
+     * Gets the attribute value for DataFormat, using the alias name DataFormat.
+     * @return the value of DataFormat
+     */
+    public String getDataFormat() {
+        return (String) getAttributeInternal(DATAFORMAT);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for DataFormat.
+     * @param value value to set the DataFormat
+     */
+    public void setDataFormat(String value) {
+        setAttributeInternal(DATAFORMAT, value);
     }
 
     /**

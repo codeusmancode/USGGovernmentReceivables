@@ -272,6 +272,18 @@
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="DataFormat"
+    Precision="30"
+    ColumnName="DATA_FORMAT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XX_REABATE_REFUND">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="SysC00889275"
     PrimaryKey="true">

@@ -143,7 +143,6 @@
   </ListBinding>
   <SQLQuery><![CDATA[SELECT /*+ FIRST_ROWS_7 */         
        XxReabateRefund.REBATE_REFUND_ID,  
-       XxReabateRefund.format,  
        XxReabateRefund.INVOICE_NUMBER,         
        XxReabateRefund.SHIPPING_PORT,         
        XxReabateRefund.SHIPPING_BILL_NO,         
@@ -174,7 +173,7 @@
        XxReabateRefund.CONSULTANT_DISPATCH_DATE ,     
        hou.name||'('||hou.short_code||')' unit ,   
        XxReabateRefund.CLAIM_AGAINST ,  
-       XxReabateRefund.COMMERCIAL_INVOICE_NUMBER  
+       XxReabateRefund.COMMERCIAL_INVOICE_NUMBER
 FROM  XX_REABATE_REFUND XxReabateRefund,      
 hr_operating_units hou      
 where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
@@ -188,12 +187,6 @@ where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
     EntityAttrName="RebateRefundId"
     EntityUsage="XxReabateRefund"
     AliasName="REBATE_REFUND_ID"/>
-  <ViewAttribute
-    Name="Format"
-    PrecisionRule="true"
-    EntityAttrName="Format"
-    EntityUsage="XxReabateRefund"
-    AliasName="FORMAT"/>
   <ViewAttribute
     Name="InvoiceNumber"
     PrecisionRule="true"
