@@ -53,6 +53,10 @@
     Name="p_com_inv"
     Kind="viewcriteria"
     Type="java.lang.String"/>
+  <Variable
+    Name="p_dataformat"
+    Kind="viewcriteria"
+    Type="java.lang.String"/>
   <ViewAccessor
     Name="AppModule_LOVInvoiceNumber1_1"
     ViewObjectName="com.usaparel.model.VO.LOV.LOVInvoiceNumber"
@@ -605,6 +609,14 @@ where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
         Operator="="
         Conjunction="AND"
         Value=":p_unit"
+        IsBindVarValue="true"
+        Required="Optional"/>
+      <ViewCriteriaItem
+        Name="DataFormat"
+        ViewAttribute="DataFormat"
+        Operator="="
+        Conjunction="AND"
+        Value=":p_dataformat"
         IsBindVarValue="true"
         Required="Optional"/>
     </ViewCriteriaRow>
