@@ -11,7 +11,7 @@
                       selectedRowKeys="#{bindings.VOXxRebateRefundHistory1.collectionModel.selectedRow}"
                       selectionListener="#{bindings.VOXxRebateRefundHistory1.collectionModel.makeCurrent}"
                       rowSelection="single" fetchSize="#{bindings.VOXxRebateRefundHistory1.rangeSize}" id="t1">
-                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.label}" id="c1">
+                <af:column headerText="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.label}" id="c155">
                     <af:inputText value="#{row.bindings.RebateHistoryId.inputValue}"
                                   label="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.label}"
                                   required="#{bindings.VOXxRebateRefundHistory1.hints.RebateHistoryId.mandatory}"
