@@ -87,6 +87,10 @@
     AMUsageName="AppModule"
     ViewInstanceName="LOVFormatTypes1"
     RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="VOXxReabateRefund1"
+    ViewObjectName="com.usaparel.model.VO.REBATE.VOXxReabateRefund"
+    RowLevelBinds="true"/>
   <ListBinding
     Name="LOV_ShippingPort"
     ListVOName="AppModule_LOVShippingPort1_1"
