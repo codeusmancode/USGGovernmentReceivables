@@ -58,6 +58,7 @@
           <Item Value="Unit"/>
           <Item Value="ClaimAgainst"/>
           <Item Value="CommercialInvoiceNumber"/>
+          <Item Value="SumRebateAmount"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
