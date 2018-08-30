@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding='windows-1252'?>
-<!DOCTYPE OperationDefinitions SYSTEM "jbo_03_01.dtd">
-<OperationDefinitions xmlns="http://xmlns.oracle.com/bc4j" Name="VOXxReabateRefundOperations">
-  <ExpressionCodeSource
-    Name="VOXxReabateRefundRow"
-    Type="Static"
-    URI="com/usaparel/model/VO/REBATE/VOXxReabateRefundRow.bcs"/>
-</OperationDefinitions>

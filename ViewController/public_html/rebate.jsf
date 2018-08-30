@@ -22,7 +22,7 @@
                                 <af:toolbar id="t2">
                                     <af:button text="Insert New"
                                                disabled="#{!bindings.CreateInsert.enabled}" id="b1"
-                                               actionListener="#{bindings.CreateInsert.execute}"/>
+                                               actionListener="#{bindings.CreateInsert.execute}" rendered="false"/>
                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b2"/>
                                     <af:button text="Cheques Inquiry" id="b5" action="cheque_inq"/>
                                     <af:button text="Export" id="b6" inlineStyle="color:Lime;">

@@ -543,21 +543,6 @@ where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
-  <ViewAttribute
-    Name="SumRebateAmount"
-    IsUpdateable="false"
-    IsSelected="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="VIEW_ATTR"
-    SQLType="NUMERIC">
-    <TransientExpression
-      Name="ExpressionScript"
-      trustMode="trusted"
-      CodeSourceName="VOXxReabateRefundRow"/>
-  </ViewAttribute>
   <ViewCriteria
     Name="VOXxReabateRefundCriteria"
     ViewObjectName="com.usaparel.model.VO.REBATE.VOXxReabateRefund"
