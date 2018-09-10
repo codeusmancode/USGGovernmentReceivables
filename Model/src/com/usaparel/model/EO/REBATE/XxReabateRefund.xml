@@ -284,6 +284,18 @@
       <Attr Name="_DisplaySize" Value="30"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="ReceiptNumber"
+    Precision="100"
+    ColumnName="RECEIPT_NUMBER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XX_REABATE_REFUND">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
   <Key
     Name="SysC00889275"
     PrimaryKey="true">

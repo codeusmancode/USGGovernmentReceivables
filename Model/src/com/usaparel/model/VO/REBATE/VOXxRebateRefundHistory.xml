@@ -22,17 +22,7 @@
     Name="rebateid"
     Kind="where"
     Type="oracle.jbo.domain.Number"/>
-  <SQLQuery><![CDATA[select h.* from XX_REABATE_REFUND_history h where rebate_refund_id = :rebateid]]></SQLQuery>
-  <ViewAttribute
-    Name="RebateHistoryId"
-    IsUpdateable="false"
-    IsPersistent="false"
-    PrecisionRule="true"
-    Type="java.math.BigDecimal"
-    ColumnType="NUMBER"
-    AliasName="REBATE_HISTORY_ID"
-    Expression="REBATE_HISTORY_ID"
-    SQLType="NUMERIC"/>
+  <SQLQuery><![CDATA[select h.*,'test' from XX_REABATE_REFUND_history h where rebate_refund_id = :rebateid]]></SQLQuery>
   <ViewAttribute
     Name="RebateRefundId"
     IsUpdateable="false"
@@ -331,6 +321,76 @@
     SQLType="VARCHAR">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Format"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="FORMAT"
+    Expression="FORMAT"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="CommercialInvoiceNumber"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="100"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="COMMERCIAL_INVOICE_NUMBER"
+    Expression="COMMERCIAL_INVOICE_NUMBER"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="DataFormat"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="30"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="DATA_FORMAT"
+    Expression="DATA_FORMAT"
+    SQLType="VARCHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RebateHistoryId"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="REBATE_HISTORY_ID"
+    Expression="REBATE_HISTORY_ID"
+    SQLType="NUMERIC"/>
+  <ViewAttribute
+    Name="Test"
+    IsUpdateable="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Precision="4"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    AliasName="&quot;'TEST'&quot;"
+    Expression="&quot;'TEST'&quot;"
+    SQLType="CHAR">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
     </DesignTime>
   </ViewAttribute>
   <AttrArray Name="KeyAttributes">

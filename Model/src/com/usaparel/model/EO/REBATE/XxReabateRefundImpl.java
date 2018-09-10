@@ -50,7 +50,8 @@ public class XxReabateRefundImpl extends EntityImpl {
         ClaimAgainst,
         CommercialInvoiceNumber,
         Format,
-        DataFormat;
+        DataFormat,
+        ReceiptNumber;
         private static AttributesEnum[] vals = null;
         private static final int firstIndex = 0;
 
@@ -105,6 +106,7 @@ public class XxReabateRefundImpl extends EntityImpl {
     public static final int COMMERCIALINVOICENUMBER = AttributesEnum.CommercialInvoiceNumber.index();
     public static final int FORMAT = AttributesEnum.Format.index();
     public static final int DATAFORMAT = AttributesEnum.DataFormat.index();
+    public static final int RECEIPTNUMBER = AttributesEnum.ReceiptNumber.index();
 
     /**
      * This is the default constructor (do not remove).
@@ -560,6 +562,22 @@ public class XxReabateRefundImpl extends EntityImpl {
      */
     public void setDataFormat(String value) {
         setAttributeInternal(DATAFORMAT, value);
+    }
+
+    /**
+     * Gets the attribute value for ReceiptNumber, using the alias name ReceiptNumber.
+     * @return the value of ReceiptNumber
+     */
+    public String getReceiptNumber() {
+        return (String) getAttributeInternal(RECEIPTNUMBER);
+    }
+
+    /**
+     * Sets <code>value</code> as the attribute value for ReceiptNumber.
+     * @param value value to set the ReceiptNumber
+     */
+    public void setReceiptNumber(String value) {
+        setAttributeInternal(RECEIPTNUMBER, value);
     }
 
     /**
