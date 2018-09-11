@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.24" id="DataBindings"
              SeparateXMLFiles="false" Package="com.usaparel.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adfm/dvt"
+             className="oracle.adfinternal.view.faces.dvt.model.binding.FacesBindingFactory"/>
+  </definitionFactories>
   <pageMap>
     <page path="/rebate.jsf" usageId="com_usaparel_view_rebatePageDef"/>
     <page path="/rebate_history.jsf" usageId="com_usaparel_view_rebate_historyPageDef"/>
@@ -10,6 +14,7 @@
     <page path="PageFlow#ExecuteWithParams1" usageId="com_usaparel_view_adfc_config___ExecuteWithParams1PageDef"/>
     <page path="/view1.jsf" usageId="com_usaparel_view_view1PageDef"/>
     <page path="/cheque_inquiry.jsf" usageId="com_usaparel_view_cheque_inquiryPageDef"/>
+    <page path="/summary.jsf" usageId="com_usaparel_view_summaryPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="com_usaparel_view_rebatePageDef" path="com.usaparel.view.pageDefs.rebatePageDef"/>
@@ -22,6 +27,7 @@
           path="com.usaparel.view.pageDefs.adfc_config___ExecuteWithParams1PageDef"/>
     <page id="com_usaparel_view_view1PageDef" path="com.usaparel.view.pageDefs.view1PageDef"/>
     <page id="com_usaparel_view_cheque_inquiryPageDef" path="com.usaparel.view.pageDefs.cheque_inquiryPageDef"/>
+    <page id="com_usaparel_view_summaryPageDef" path="com.usaparel.view.pageDefs.summaryPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="com.usaparel.model.AM"

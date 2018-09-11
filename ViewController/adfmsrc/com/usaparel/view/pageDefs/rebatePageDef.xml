@@ -12,6 +12,7 @@
               id="VOXxReabateRefundLines2Iterator"/>
     <searchRegion Criteria="VOXxReabateRefundCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="VOXxReabateRefund1Iterator" id="VOXxReabateRefundCriteriaQuery"/>
+    
   </executables>
   <bindings>
     <action IterBinding="VOXxReabateRefund1Iterator" id="CreateInsert" RequiresUpdateModel="true"
@@ -58,6 +59,7 @@
           <Item Value="Unit"/>
           <Item Value="ClaimAgainst"/>
           <Item Value="CommercialInvoiceNumber"/>
+          <Item Value="ReceiptNumber"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
@@ -81,5 +83,6 @@
     </tree>
     <action IterBinding="VOXxReabateRefundLines2Iterator" id="CreateInsert1" RequiresUpdateModel="true"
             Action="createInsertRow"/>
+    
   </bindings>
 </pageDefinition>

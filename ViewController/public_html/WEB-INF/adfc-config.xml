@@ -30,6 +30,9 @@
   <view id="cheque_inquiry">
     <page>/cheque_inquiry.jsf</page>
   </view>
+  <view id="summary">
+    <page>/summary.jsf</page>
+  </view>
   <control-flow-rule id="__6">
     <from-activity-id>rebate_history</from-activity-id>
     <control-flow-case id="__7">
@@ -50,6 +53,10 @@
     <control-flow-case id="__11">
       <from-outcome>cheque_inq</from-outcome>
       <to-activity-id>cheque_inquiry</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome>summary</from-outcome>
+      <to-activity-id>summary</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__4">

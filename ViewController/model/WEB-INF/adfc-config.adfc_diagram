@@ -178,4 +178,29 @@
       <property
          name="sdm:polyPoints">R58,275.5,282.44824,640.6963,372.44824,L50</property>
    </ControlFlowCase>
+   <View
+      id="View18">
+      <property
+         name="activityId">summary</property>
+      <property
+         name="x">155.5</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>summary&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">443.79883</property>
+      <property
+         name="page">/summary.jsf</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase19"
+      from="View2"
+      to="View18">
+      <property
+         name="fromOutcome">summary</property>
+      <property
+         name="sdm:polyPoints">B44,231.0,329.44824,155.5,389.44824,T50</property>
+   </ControlFlowCase>
 </SDM>

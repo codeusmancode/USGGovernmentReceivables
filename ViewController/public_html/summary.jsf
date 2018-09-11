@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="summary.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:pageTemplate viewId="/app_template.jsf" id="pt1">
+                <f:facet name="main_body">
+                    <af:panelGroupLayout id="pgl1" layout="vertical">
+                        <af:panelSplitter id="ps1" orientation="vertical" splitterPosition="200"
+                                          styleClass="AFStretchWidth">
+                            <f:facet name="first">
+                                <dvt:pivotTable id="pt3" value="#{bindings.VOSummary2_1.pivotTableModel}" var="cellData"
+                                                varStatus="cellStatus" splitMode="enabled" summary="sdfsdf"
+                                                styleClass="AFStretchWidth">
+                                    <dvt:headerCell>
+                                        <af:switcher facetName="#{cellData.layerName}" defaultFacet="Default" id="s3">
+                                            <f:facet name="DataLayer">
+                                                <af:outputText value="#{cellData.label}" id="ot10"/>
+                                            </f:facet>
+                                            <f:facet name="Status">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot11"/>
+                                            </f:facet>
+                                            <f:facet name="Default">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot12"/>
+                                            </f:facet>
+                                        </af:switcher>
+                                    </dvt:headerCell>
+                                    <dvt:dataCell id="dc2">
+                                        <af:switcher facetName="#{cellStatus.members.DataLayer.value}"
+                                                     defaultFacet="Default" id="s4">
+                                            <f:facet name="NoOfCases">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot13">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary2_1.hints.NoOfCases.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalEsitmate">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot14">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary2_1.hints.TotalEsitmate.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalRebateAmount">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot15">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary2_1.hints.TotalRebateAmount.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalReceived">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot16">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary2_1.hints.TotalReceived.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="Default">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot17"/>
+                                            </f:facet>
+                                        </af:switcher>
+                                    </dvt:dataCell>
+                                </dvt:pivotTable>
+                            </f:facet>
+                            <f:facet name="second">
+                                <dvt:pivotTable id="pt2" value="#{bindings.VOSummary1.pivotTableModel}" var="cellData"
+                                                varStatus="cellStatus" splitMode="enabled" summary="sdfsdf"
+                                                styleClass="AFStretchWidth">
+                                    <dvt:headerCell>
+                                        <af:switcher facetName="#{cellData.layerName}" defaultFacet="Default" id="s1">
+                                            <f:facet name="DataLayer">
+                                                <af:outputText value="#{cellData.label}" id="ot1"/>
+                                            </f:facet>
+                                            <f:facet name="OrgId">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot2">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary1.hints.OrgId.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="Status">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot3"/>
+                                            </f:facet>
+                                            <f:facet name="Default">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot4"/>
+                                            </f:facet>
+                                        </af:switcher>
+                                    </dvt:headerCell>
+                                    <dvt:dataCell id="dc1">
+                                        <af:switcher facetName="#{cellStatus.members.DataLayer.value}"
+                                                     defaultFacet="Default" id="s2">
+                                            <f:facet name="NoOfCases">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot5">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary1.hints.NoOfCases.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalEsitmate">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot6">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary1.hints.TotalEsitmate.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalRebateAmount">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot7">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary1.hints.TotalRebateAmount.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="TotalReceived">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot8">
+                                                    <af:convertNumber groupingUsed="false"
+                                                                      pattern="#{bindings.VOSummary1.hints.TotalReceived.format}"/>
+                                                </af:outputText>
+                                            </f:facet>
+                                            <f:facet name="Default">
+                                                <af:outputText value="#{cellData.dataValue}" id="ot9"/>
+                                            </f:facet>
+                                        </af:switcher>
+                                    </dvt:dataCell>
+                                </dvt:pivotTable>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

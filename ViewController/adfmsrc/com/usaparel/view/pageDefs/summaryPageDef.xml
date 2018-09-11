@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.24" id="summaryPageDef"
+                Package="com.usaparel.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="VOSummary1" RangeSize="-1" DataControl="AppModuleDataControl" id="VOSummary1Iterator"/>
+    <iterator Binds="VOSummary2_1" RangeSize="-1" DataControl="AppModuleDataControl" id="VOSummary2_1Iterator"/>
+  </executables>
+  <bindings>
+    <pivotTable IterBinding="VOSummary1Iterator" id="VOSummary1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap convert="false">
+        <columns>
+          <item value="OrgId" itemLabel="Org"/>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="NoOfCases" label="No."/>
+            <item value="TotalEsitmate" label="Estimate"/>
+            <item value="TotalRebateAmount" label="Rebate"/>
+            <item value="TotalReceived" label="Received"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="Status" itemLabel="Status"/>
+        </rows>
+        <pages/>
+        <aggregatedItems>
+          <item aggregateLocation="AFTER" aggregateType="SUM" value="Status" aggregateLabel="Total"/>
+        </aggregatedItems>
+      </pivotTableDataMap>
+    </pivotTable>
+    <pivotTable IterBinding="VOSummary2_1Iterator" id="VOSummary2_1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <pivotTableDataMap convert="false">
+        <columns>
+          <data aggregateDuplicates="true" defaultAggregateType="SUM">
+            <item value="NoOfCases" label="No."/>
+            <item value="TotalEsitmate" label="Estimate"/>
+            <item value="TotalRebateAmount" label="Rebate Amount"/>
+            <item value="TotalReceived" label="Received"/>
+          </data>
+        </columns>
+        <rows>
+          <item value="Status"/>
+        </rows>
+        <pages/>
+      </pivotTableDataMap>
+    </pivotTable>
+  </bindings>
+</pageDefinition>

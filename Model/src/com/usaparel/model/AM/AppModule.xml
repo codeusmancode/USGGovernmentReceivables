@@ -85,6 +85,12 @@
   <ViewUsage
     Name="LOVFormatTypes1"
     ViewObjectName="com.usaparel.model.VO.LOV.LOVFormatTypes"/>
+  <ViewUsage
+    Name="VOSummary1"
+    ViewObjectName="com.usaparel.model.VO.REBATE.VOSummary"/>
+  <ViewUsage
+    Name="VOSummary2_1"
+    ViewObjectName="com.usaparel.model.VO.REBATE.VOSummary2"/>
   <ViewLinkUsage
     Name="VLRebateAttachments1"
     ViewLinkObjectName="com.usaparel.model.VL.VLRebateAttachments"

@@ -11,9 +11,13 @@
   PageIterMode="Full"
   QueryHint="FIRST_ROWS_5"
   FetchMode="FETCH_AS_NEEDED"
-  FetchSize="5">
+  FetchSize="5"
+  RowClass="com.usaparel.model.VO.REBATE.VOXxReabateRefundRowImpl"
+  ComponentClass="com.usaparel.model.VO.REBATE.VOXxReabateRefundImpl">
   <DesignTime>
     <Attr Name="_isExpertMode" Value="true"/>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
   </DesignTime>
   <Variable
     Name="p_shipping_bill"
@@ -167,42 +171,43 @@
     </AttrArray>
     <DisplayCriteria/>
   </ListBinding>
-  <SQLQuery><![CDATA[SELECT /*+ FIRST_ROWS_7 */          
-       XxReabateRefund.REBATE_REFUND_ID,   
-       XxReabateRefund.INVOICE_NUMBER,          
-       XxReabateRefund.SHIPPING_PORT,          
-       XxReabateRefund.SHIPPING_BILL_NO,          
-       XxReabateRefund.SHIPPING_BILL_DATE,          
-       XxReabateRefund.REBATE_AMOUNT,          
-       XxReabateRefund.CASE_FILED_DATE,          
-       case          
-       when to_char(XxReabateRefund.CASE_FILED_DATE,'mm')<=6 then         
-        to_char(add_months(XxReabateRefund.CASE_FILED_DATE,-12),'yyyy')||'-'||to_char(XxReabateRefund.CASE_FILED_DATE,'yyyy') else         
-        to_char(XxReabateRefund.CASE_FILED_DATE,'yyyy')||'-'||to_char(add_months(XxReabateRefund.CASE_FILED_DATE,12),'yyyy')         
-        end CLAIM_FILED_FINANCIAL_YEAR,         
-       XxReabateRefund.REBATE_AMOUNT_RECEIVED,          
-       XxReabateRefund.LESS_EXCESS,          
-       XxReabateRefund.CHEQUE_NO,          
-       XxReabateRefund.CHEQUE_DATE,          
-       XxReabateRefund.CLAIM_REC_FINANCIAL_YEAR,          
-       XxReabateRefund.STATUS,          
-       XxReabateRefund.PENDING_AMOUNT,          
-       XxReabateRefund.CREATED_BY,          
-       XxReabateRefund.CREATION_DATE,          
-       XxReabateRefund.UPDATED_BY,          
-       XxReabateRefund.UPDATION_DATE,          
-       XxReabateRefund.VERSION_NUMBER,          
-       XxReabateRefund.REBATE_ESITMATE,          
-       XxReabateRefund.REALIZATION_DATE,          
-       XxReabateRefund.INVOICE_VALUE ,        
-       XxReabateRefund.org_id,       
-       XxReabateRefund.CONSULTANT_DISPATCH_DATE ,      
-       hou.name||'('||hou.short_code||')' unit ,    
-       XxReabateRefund.CLAIM_AGAINST ,   
-       XxReabateRefund.COMMERCIAL_INVOICE_NUMBER, 
-       XxReabateRefund.DATA_FORMAT 
-FROM  XX_REABATE_REFUND XxReabateRefund,       
-hr_operating_units hou       
+  <SQLQuery><![CDATA[SELECT /*+ FIRST_ROWS_7 */           
+       XxReabateRefund.REBATE_REFUND_ID,    
+       XxReabateRefund.INVOICE_NUMBER,           
+       XxReabateRefund.SHIPPING_PORT,           
+       XxReabateRefund.SHIPPING_BILL_NO,           
+       XxReabateRefund.SHIPPING_BILL_DATE,           
+       XxReabateRefund.REBATE_AMOUNT,           
+       XxReabateRefund.CASE_FILED_DATE,           
+       case           
+       when to_char(XxReabateRefund.CASE_FILED_DATE,'mm')<=6 then          
+        to_char(add_months(XxReabateRefund.CASE_FILED_DATE,-12),'yyyy')||'-'||to_char(XxReabateRefund.CASE_FILED_DATE,'yyyy') else          
+        to_char(XxReabateRefund.CASE_FILED_DATE,'yyyy')||'-'||to_char(add_months(XxReabateRefund.CASE_FILED_DATE,12),'yyyy')          
+        end CLAIM_FILED_FINANCIAL_YEAR,          
+       XxReabateRefund.REBATE_AMOUNT_RECEIVED,           
+       XxReabateRefund.LESS_EXCESS,           
+       XxReabateRefund.CHEQUE_NO,           
+       XxReabateRefund.CHEQUE_DATE,           
+       XxReabateRefund.CLAIM_REC_FINANCIAL_YEAR,           
+       XxReabateRefund.STATUS,           
+       XxReabateRefund.PENDING_AMOUNT,           
+       XxReabateRefund.CREATED_BY,           
+       XxReabateRefund.CREATION_DATE,           
+       XxReabateRefund.UPDATED_BY,           
+       XxReabateRefund.UPDATION_DATE,           
+       XxReabateRefund.VERSION_NUMBER,           
+       XxReabateRefund.REBATE_ESITMATE,           
+       XxReabateRefund.REALIZATION_DATE,           
+       XxReabateRefund.INVOICE_VALUE ,         
+       XxReabateRefund.org_id,        
+       XxReabateRefund.CONSULTANT_DISPATCH_DATE ,       
+       hou.name||'('||hou.short_code||')' unit ,     
+       XxReabateRefund.CLAIM_AGAINST ,    
+       XxReabateRefund.COMMERCIAL_INVOICE_NUMBER,  
+       XxReabateRefund.DATA_FORMAT, 
+       XxReabateRefund.receipt_number 
+FROM  XX_REABATE_REFUND XxReabateRefund,        
+hr_operating_units hou        
 where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
   <EntityUsage
     Name="XxReabateRefund"
@@ -543,6 +548,22 @@ where hou.organization_id(+) = XxReabateRefund.org_id]]></SQLQuery>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>
+  <ViewAttribute
+    Name="ReceiptNumber"
+    PrecisionRule="true"
+    EntityAttrName="ReceiptNumber"
+    EntityUsage="XxReabateRefund"
+    AliasName="RECEIPT_NUMBER"/>
+  <ViewAttribute
+    Name="SumRebateAmt"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    AliasName="VIEW_ATTR"
+    SQLType="NUMERIC"/>
   <ViewCriteria
     Name="VOXxReabateRefundCriteria"
     ViewObjectName="com.usaparel.model.VO.REBATE.VOXxReabateRefund"

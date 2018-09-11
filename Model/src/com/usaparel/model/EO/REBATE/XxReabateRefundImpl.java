@@ -580,6 +580,7 @@ public class XxReabateRefundImpl extends EntityImpl {
         setAttributeInternal(RECEIPTNUMBER, value);
     }
 
+
     /**
      * @param rebateRefundId key constituent
 

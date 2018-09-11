@@ -20,8 +20,7 @@
                             <f:facet name="menus"/>
                             <f:facet name="toolbar">
                                 <af:toolbar id="t2">
-                                    <af:button text="Insert New"
-                                               disabled="#{!bindings.CreateInsert.enabled}" id="b1"
+                                    <af:button text="Insert New" disabled="#{!bindings.CreateInsert.enabled}" id="b1"
                                                actionListener="#{bindings.CreateInsert.execute}" rendered="false"/>
                                     <af:button actionListener="#{bindings.Commit.execute}" text="Save" id="b2"/>
                                     <af:button text="Cheques Inquiry" id="b5" action="cheque_inq"/>
@@ -29,6 +28,7 @@
                                         <af:exportCollectionActionListener type="CSV" exportedId="t1"
                                                                            filename="data.csv" title="data"/>
                                     </af:button>
+                                    <af:button text="Summary" id="b7" action="summary"/>
                                 </af:toolbar>
                             </f:facet>
                             <af:table value="#{bindings.VOXxReabateRefund1.collectionModel}" var="row"
@@ -37,8 +37,8 @@
                                       rowBandingInterval="0"
                                       selectedRowKeys="#{bindings.VOXxReabateRefund1.collectionModel.selectedRow}"
                                       selectionListener="#{bindings.VOXxReabateRefund1.collectionModel.makeCurrent}"
-                                      rowSelection="single" fetchSize="#{bindings.VOXxReabateRefund1.rangeSize}"
-                                      id="t1" partialTriggers="::b1" autoHeightRows="4"
+                                      rowSelection="single" fetchSize="#{bindings.VOXxReabateRefund1.rangeSize}" id="t1"
+                                      partialTriggers="::b1" autoHeightRows="4"
                                       binding="#{backingBeanScope.RebateRefundBean.table}">
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateRefundId.label}"
                                            id="c1" rendered="false">
@@ -54,14 +54,15 @@
                                                           pattern="#{bindings.VOXxReabateRefund1.hints.RebateRefundId.format}"/>
                                     </af:inputText>
                                 </af:column>
-                                <af:column id="c24">
-                                    <af:link text="#{row.bindings.InvoiceNumber.inputValue}" id="l1" action="history">
+                                <af:column id="c24" width="50">
+                                    <af:link text="#{row.bindings.InvoiceNumber.inputValue eq null ? row.bindings.ReceiptNumber.inputValue:row.bindings.InvoiceNumber.inputValue }"
+                                             id="l1" action="history">
                                         <af:setPropertyListener type="action"
                                                                 from="#{row.bindings.RebateRefundId.inputValue}"
                                                                 to="#{pageFlowScope.rebate_id}"/>
                                     </af:link>
                                 </af:column>
-                                <af:column id="c38" headerText="Unit">
+                                <af:column id="c38" headerText="Unit" width="100">
                                     <af:selectOneChoice value="#{row.bindings.Unit.inputValue}"
                                                         label="#{row.bindings.Unit.label}"
                                                         required="#{bindings.VOXxReabateRefund1.hints.Unit.mandatory}"
@@ -71,13 +72,13 @@
                                         <f:validator binding="#{row.bindings.Unit.validator}"/>
                                     </af:selectOneChoice>
                                 </af:column>
-                                <af:column id="c40" headerText="Commarcial Invoice#">
+                                <af:column id="c40" headerText="Commarcial Invoice#" width="70">
                                     <af:outputText value="#{row.CommercialInvoiceNumber}"
                                                    shortDesc="#{bindings.VOXxReabateRefund1.hints.CommercialInvoiceNumber.tooltip}"
                                                    id="ot3"/>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.label}"
-                                           id="c21">
+                                           id="c21" width="80">
                                     <af:inputText value="#{row.bindings.RebateEsitmate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.mandatory}"
@@ -90,8 +91,8 @@
                                                           pattern="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.format}"/>
                                     </af:inputText>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.InvoiceValue.label}"
-                                           id="c23">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.InvoiceValue.label}" id="c23"
+                                           width="60">
                                     <af:inputText value="#{row.bindings.InvoiceValue.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.InvoiceValue.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.InvoiceValue.mandatory}"
@@ -105,7 +106,7 @@
                                     </af:inputText>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RealizationDate.label}"
-                                           id="c22">
+                                           id="c22" width="100">
                                     <af:inputDate value="#{row.bindings.RealizationDate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.RealizationDate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.RealizationDate.mandatory}"
@@ -116,7 +117,8 @@
                                         <af:convertDateTime pattern="#{bindings.VOXxReabateRefund1.hints.RealizationDate.format}"/>
                                     </af:inputDate>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.ShippingPort.label}" id="c3">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.ShippingPort.label}" id="c3"
+                                           width="80">
                                     <af:selectOneChoice value="#{row.bindings.ShippingPort.inputValue}"
                                                         label="#{row.bindings.ShippingPort.label}"
                                                         required="#{bindings.VOXxReabateRefund1.hints.ShippingPort.mandatory}"
@@ -127,7 +129,7 @@
                                     </af:selectOneChoice>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.ShippingBillNo.label}"
-                                           id="c4">
+                                           id="c4" width="100">
                                     <af:inputText value="#{row.bindings.ShippingBillNo.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.ShippingBillNo.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.ShippingBillNo.mandatory}"
@@ -139,7 +141,7 @@
                                     </af:inputText>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.ShippingBillDate.label}"
-                                           id="c5">
+                                           id="c5" width="99">
                                     <af:inputDate value="#{row.bindings.ShippingBillDate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.ShippingBillDate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.ShippingBillDate.mandatory}"
@@ -150,7 +152,8 @@
                                         <af:convertDateTime pattern="#{bindings.VOXxReabateRefund1.hints.ShippingBillDate.format}"/>
                                     </af:inputDate>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateAmount.label}" id="c6">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateAmount.label}" id="c6"
+                                           width="80">
                                     <af:inputText value="#{row.bindings.RebateAmount.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.RebateAmount.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.RebateAmount.mandatory}"
@@ -163,8 +166,8 @@
                                                           pattern="#{bindings.VOXxReabateRefund1.hints.RebateAmount.format}"/>
                                     </af:inputText>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.CaseFiledDate.label}"
-                                           id="c7">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.CaseFiledDate.label}" id="c7"
+                                           width="90">
                                     <af:inputDate value="#{row.bindings.CaseFiledDate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.CaseFiledDate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.CaseFiledDate.mandatory}"
@@ -175,7 +178,7 @@
                                         <af:convertDateTime pattern="#{bindings.VOXxReabateRefund1.hints.CaseFiledDate.format}"/>
                                     </af:inputDate>
                                 </af:column>
-                                <af:column id="c37" headerText="Consultant Dispatch Date">
+                                <af:column id="c37" headerText="Consultant Dispatch Date" width="90">
                                     <af:inputDate value="#{row.bindings.ConsultantDispatchDate.inputValue}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.ConsultantDispatchDate.mandatory}"
                                                   columns="#{bindings.VOXxReabateRefund1.hints.ConsultantDispatchDate.displayWidth}"
@@ -297,8 +300,8 @@
                                                           pattern="#{bindings.VOXxReabateRefund1.hints.CreatedBy.format}"/>
                                     </af:inputText>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.CreationDate.label}"
-                                           id="c17" rendered="false">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.CreationDate.label}" id="c17"
+                                           rendered="false">
                                     <af:inputDate value="#{row.bindings.CreationDate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.CreationDate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.CreationDate.mandatory}"
@@ -323,8 +326,8 @@
                                                           pattern="#{bindings.VOXxReabateRefund1.hints.UpdatedBy.format}"/>
                                     </af:inputText>
                                 </af:column>
-                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.UpdationDate.label}"
-                                           id="c19" rendered="false">
+                                <af:column headerText="#{bindings.VOXxReabateRefund1.hints.UpdationDate.label}" id="c19"
+                                           rendered="false">
                                     <af:inputDate value="#{row.bindings.UpdationDate.inputValue}"
                                                   label="#{bindings.VOXxReabateRefund1.hints.UpdationDate.label}"
                                                   required="#{bindings.VOXxReabateRefund1.hints.UpdationDate.mandatory}"
