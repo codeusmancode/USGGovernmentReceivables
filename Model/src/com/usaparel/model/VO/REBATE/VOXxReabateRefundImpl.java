@@ -127,23 +127,8 @@ public class VOXxReabateRefundImpl extends ViewObjectImpl {
     public void executeQuery() {
         
         super.executeQuery();
-        this.setRebateAmountSum(getTotalRebate());
+       
     }
-    private BigDecimal getTotalRebate(){
-        BigDecimal bd = new BigDecimal(0);
-        RowSetIterator rsi = getViewObject().createRowSetIterator(null);
-        
-        while (rsi.hasNext()){
-            VOXxReabateRefundRowImpl row  =(VOXxReabateRefundRowImpl) rsi.next();
-            BigDecimal rebateAmt = row.getRebateAmount();
-            if (rebateAmt != null)
-                bd = bd.add(row.getRebateAmount());
-            
-        }
-        rsi.reset();
-        rsi.closeRowSetIterator();
-        System.out.println(">>>>> "+bd);
-        return bd;
-    }
+    
 }
 

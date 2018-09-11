@@ -73,8 +73,8 @@
                                     </af:selectOneChoice>
                                 </af:column>
                                 <af:column id="c40" headerText="Commarcial Invoice#" width="70">
-                                    <af:outputText value="#{row.CommercialInvoiceNumber}"
-                                                   shortDesc="#{bindings.VOXxReabateRefund1.hints.CommercialInvoiceNumber.tooltip}"
+                                    <af:outputText value="#{row.CommercialInvNo}"
+                                                   shortDesc="#{bindings.VOXxReabateRefund1.hints.CommercialInvNo.tooltip}"
                                                    id="ot3"/>
                                 </af:column>
                                 <af:column headerText="#{bindings.VOXxReabateRefund1.hints.RebateEsitmate.label}"

@@ -60,6 +60,7 @@
           <Item Value="ClaimAgainst"/>
           <Item Value="CommercialInvoiceNumber"/>
           <Item Value="ReceiptNumber"/>
+          <Item Value="CommercialInvNo"/>
         </AttrNames>
       </nodeDefinition>
     </tree>

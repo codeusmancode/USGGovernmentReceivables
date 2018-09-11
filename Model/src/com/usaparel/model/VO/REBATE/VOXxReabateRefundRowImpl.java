@@ -54,6 +54,7 @@ public class VOXxReabateRefundRowImpl extends ViewRowImpl {
         CommercialInvoiceNumber,
         DataFormat,
         ReceiptNumber,
+        CommercialInvNo,
         SumRebateAmt,
         VOXxRebateRefundAttachment,
         VOXxReabateRefundLines,
@@ -118,6 +119,7 @@ public class VOXxReabateRefundRowImpl extends ViewRowImpl {
     public static final int COMMERCIALINVOICENUMBER = AttributesEnum.CommercialInvoiceNumber.index();
     public static final int DATAFORMAT = AttributesEnum.DataFormat.index();
     public static final int RECEIPTNUMBER = AttributesEnum.ReceiptNumber.index();
+    public static final int COMMERCIALINVNO = AttributesEnum.CommercialInvNo.index();
     public static final int SUMREBATEAMT = AttributesEnum.SumRebateAmt.index();
     public static final int VOXXREBATEREFUNDATTACHMENT = AttributesEnum.VOXxRebateRefundAttachment.index();
     public static final int VOXXREABATEREFUNDLINES = AttributesEnum.VOXxReabateRefundLines.index();
@@ -605,6 +607,14 @@ public class VOXxReabateRefundRowImpl extends ViewRowImpl {
      */
     public void setReceiptNumber(String value) {
         setAttributeInternal(RECEIPTNUMBER, value);
+    }
+
+    /**
+     * Gets the attribute value for the calculated attribute CommercialInvNo.
+     * @return the CommercialInvNo
+     */
+    public String getCommercialInvNo() {
+        return (String) getAttributeInternal(COMMERCIALINVNO);
     }
 
     /**
